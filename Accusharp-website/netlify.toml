@@ -1,0 +1,106 @@
+# ============================================================
+# netlify.toml — Accusharp Cutlery
+# Save this file in the ROOT of your accusharp-website folder
+# (same level as index.html and styles.css)
+# ============================================================
+
+# ------------------------------------------------------------
+# BUILD SETTINGS
+# ------------------------------------------------------------
+# Static HTML site — no build step needed. Netlify just serves
+# the files from the root directory as-is.
+[build]
+  publish = "."
+
+# ------------------------------------------------------------
+# CLEAN URLS
+# ------------------------------------------------------------
+# Lets visitors type /los-angeles instead of /los-angeles.html
+# Better for SEO and looks cleaner in the address bar.
+[[redirects]]
+  from = "/los-angeles"
+  to = "/los-angeles.html"
+  status = 200
+
+[[redirects]]
+  from = "/long-beach"
+  to = "/long-beach.html"
+  status = 200
+
+[[redirects]]
+  from = "/santa-monica"
+  to = "/santa-monica.html"
+  status = 200
+
+# Add one block like the above for every city/service page you have.
+# Example: pasadena.html, orange-county.html, etc.
+
+# ------------------------------------------------------------
+# FORCE HTTPS + WWW CONSISTENCY
+# ------------------------------------------------------------
+# Redirect www.accusharpcutlery.com to accusharpcutlery.com
+# (Or flip this if you prefer the www version — just reverse from/to)
+[[redirects]]
+  from = "https://www.accusharpcutlery.com/*"
+  to = "https://accusharpcutlery.com/:splat"
+  status = 301
+  force = true
+
+# ------------------------------------------------------------
+# 404 PAGE
+# ------------------------------------------------------------
+# If you create a custom 404.html later, Netlify serves it
+# automatically for any missing page. No config needed —
+# just drop 404.html in the root folder.
+
+# ------------------------------------------------------------
+# SECURITY + PERFORMANCE HEADERS
+# ------------------------------------------------------------
+# These headers improve your security score and SEO signals.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+
+# ------------------------------------------------------------
+# CACHE CONTROL
+# ------------------------------------------------------------
+# Cache images and CSS/JS aggressively — they rarely change
+# and this makes your site load faster on repeat visits.
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/styles.css"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/script.js"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# HTML files — shorter cache so updates show up quickly
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# ------------------------------------------------------------
+# FORMS
+# ------------------------------------------------------------
+# Netlify auto-detects forms with the `data-netlify="true"`
+# attribute in your HTML. No config needed here — just make
+# sure your booking form in index.html has that attribute
+# plus a `name` attribute, like:
+#
+#   <form name="booking" method="POST" data-netlify="true">
+#
+# After deploy: Netlify dashboard → Forms → you'll see submissions.
+# Set up email notifications in: Site settings → Forms → Notifications

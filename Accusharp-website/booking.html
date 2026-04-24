@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO META -->
+  <title>Book Knife Sharpening | Accusharp Cutlery</title>
+  <meta name="description" content="Book mobile knife sharpening in Southern California. We come to you. Call, text, or fill out the form. (310) 420-1147.">
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+
+  <!-- STYLESHEET -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announce">
+    MOBILE KNIFE SHARPENING · <strong>BOOK ONLINE OR CALL (310) 420-1147</strong>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <a href="index.html" aria-label="Home">
+      <img src="images/logo.jpg" alt="Accusharp Cutlery" class="logo">
+    </a>
+    <nav class="nav" id="primaryNav">
+      <a href="index.html">Home</a>
+      <a href="booking.html" class="active">Book</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="los-angeles.html">LA Service</a>
+      <a href="https://shop.accusharpcutlery.com" target="_blank" rel="noopener">Shop Knives</a>
+    </nav>
+    <div class="header-cta">
+      <a class="phone-top" href="tel:3104201147">(310) 420-1147</a>
+      <button class="mobile-nav-toggle" aria-label="Toggle menu" aria-controls="primaryNav">☰</button>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="index.html">Home</a>
+    <span class="sep">›</span>
+    <span class="current">Book Sharpening</span>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="eyebrow">Book Your Sharpening</div>
+    <h1>Razor sharp, door to door.</h1>
+    <p class="tagline">"Never a Dull Moment"</p>
+    <p>Tell us a bit about your knives and where you're at. We'll confirm within 24 hours.</p>
+  </div>
+
+  <!-- CONTACT OPTIONS BAR -->
+  <div class="contact-bar">
+    <div class="contact-bar-inner">
+      <a class="contact-option" href="#form">
+        <div class="contact-icon">✉</div>
+        <div>
+          <div class="label">Email Form</div>
+          <div class="value">Fill out below</div>
+        </div>
+      </a>
+      <!-- REPLACE the Calendly URL below with your real one -->
+      <a class="contact-option" href="https://calendly.com/accusharpcutlery" target="_blank" rel="noopener">
+        <div class="contact-icon">📅</div>
+        <div>
+          <div class="label">Pick a Time</div>
+          <div class="value">Calendly</div>
+        </div>
+      </a>
+      <a class="contact-option" href="sms:3104201147">
+        <div class="contact-icon">💬</div>
+        <div>
+          <div class="label">Text Us</div>
+          <div class="value">(310) 420-1147</div>
+        </div>
+      </a>
+      <a class="contact-option" href="tel:3104201147">
+        <div class="contact-icon">📞</div>
+        <div>
+          <div class="label">Call Us</div>
+          <div class="value">(310) 420-1147</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- MAIN BOOKING AREA -->
+  <div class="main-booking" id="form">
+
+    <!-- BOOKING FORM (Netlify-enabled) -->
+    <div class="form-box">
+      <h2>Request an Appointment</h2>
+      <p class="form-sub">Takes about 60 seconds. No payment needed until we arrive.</p>
+
+      <!--
+        NETLIFY FORM:
+        The attributes below tell Netlify to capture this form's submissions.
+        - name="booking" identifies this form in your Netlify dashboard
+        - data-netlify="true" activates Netlify form processing
+        - netlify-honeypot="bot-field" adds spam protection
+        - action="/thank-you.html" redirects after successful submission
+          (or remove this attribute if you want to stay on the same page)
+      -->
+      <form id="bookingForm"
+            name="booking"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            action="/thank-you.html">
+
+        <!-- Hidden field required by Netlify -->
+        <input type="hidden" name="form-name" value="booking">
+
+        <!-- Honeypot field (invisible, catches spam bots) -->
+        <p style="display:none;">
+          <label>Don't fill this out if you're human: <input name="bot-field"></label>
+        </p>
+
+        <!-- NAME ROW -->
+        <div class="field-row">
+          <div>
+            <label for="firstName">First Name <span class="req">*</span></label>
+            <input type="text" id="firstName" name="first_name" placeholder="John" required>
+          </div>
+          <div>
+            <label for="lastName">Last Name <span class="req">*</span></label>
+            <input type="text" id="lastName" name="last_name" placeholder="Smith" required>
+          </div>
+        </div>
+
+        <!-- CONTACT ROW -->
+        <div class="field-row">
+          <div>
+            <label for="email">Email <span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="you@email.com" required>
+          </div>
+          <div>
+            <label for="phone">Phone <span class="req">*</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="(310) 555-0100" required>
+          </div>
+        </div>
+
+        <!-- ADDRESS -->
+        <div class="field-group">
+          <label for="street">Street Address <span class="req">*</span></label>
+          <input type="text" id="street" name="street_address" placeholder="123 Main Street" required>
+        </div>
+        <div class="field-row">
+          <div>
+            <label for="city">City <span class="req">*</span></label>
+            <input type="text" id="city" name="city" placeholder="Los Angeles" required>
+          </div>
+          <div>
+            <label for="zip">Zip Code <span class="req">*</span></label>
+            <input type="text" id="zip" name="zip" placeholder="90001" required>
+          </div>
+        </div>
+
+        <!-- KNIFE COUNT TIER SELECTOR -->
+        <div class="field-group">
+          <label>How many knives? <span class="req">*</span></label>
+          <div class="tier-selector" id="tierSelector">
+            <div class="tier-option" data-tier="1-8">
+              <div class="tier-label">1-8</div>
+              <div class="tier-sub">$80 Flat</div>
+            </div>
+            <div class="tier-option" data-tier="9-19">
+              <div class="tier-label">9-19</div>
+              <div class="tier-sub">$10/Knife</div>
+            </div>
+            <div class="tier-option" data-tier="20+">
+              <div class="tier-label">20+</div>
+              <div class="tier-sub">$8/Knife</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EXACT COUNT (shown after tier selected) -->
+        <div class="field-group" id="exactCountGroup" style="display:none;">
+          <label for="exactCount">Approximate exact count</label>
+          <input type="number" id="exactCount" name="exact_count" placeholder="e.g. 12" min="1">
+        </div>
+
+        <!-- KNIFE TYPES -->
+        <div class="field-group">
+          <label>What are you having sharpened? (Select all that apply)</label>
+          <div class="checkbox-grid">
+            <label class="checkbox-option"><input type="checkbox" name="knife_types" value="Kitchen knives"><span>Kitchen knives</span></label>
+            <label class="checkbox-option"><input type="checkbox" name="knife_types" value="Chef knives"><span>Chef knives</span></label>
+            <label class="checkbox-option"><input type="checkbox" name="knife_types" value="Pocket knives"><span>Pocket knives</span></label>
+            <label class="checkbox-option"><input type="checkbox" name="knife_types" value="Scissors/Shears"><span>Scissors / Shears</span></label>
+            <label class="checkbox-option"><input type="checkbox" name="knife_types" value="Hunting knives"><span>Hunting knives</span></label>
+            <label class="checkbox-option"><input type="checkbox" name="knife_types" value="Cleavers"><span>Cleavers</span></label>
+            <label class="checkbox-option"><input type="checkbox" name="knife_types" value="Serrated knives"><span>Serrated knives</span></label>
+            <label class="checkbox-option"><input type="checkbox" name="knife_types" value="Japanese / single-bevel"><span>Japanese / single-bevel</span></label>
+          </div>
+        </div>
+
+        <!-- PREFERRED DATE & TIME -->
+        <div class="field-row">
+          <div>
+            <label for="preferredDate">Preferred Date</label>
+            <input type="text" id="preferredDate" name="preferred_date" placeholder="Next Tuesday, morning">
+          </div>
+          <div>
+            <label for="bestTime">Best Time to Reach You</label>
+            <select id="bestTime" name="best_time_to_reach">
+              <option value="">— Pick one —</option>
+              <option>Morning (8am–12pm)</option>
+              <option>Afternoon (12pm–5pm)</option>
+              <option>Evening (5pm–8pm)</option>
+              <option>Anytime</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- NOTES -->
+        <div class="field-group">
+          <label for="notes">Anything else we should know?</label>
+          <textarea id="notes" name="notes" placeholder="Gate code, parking info, specific knives needing attention, etc."></textarea>
+        </div>
+
+        <!-- SUBMIT -->
+        <div class="submit-row">
+          <button type="submit" class="btn-submit">Request Appointment →</button>
+          <p class="form-note">We'll confirm by email within 24 hours. No charge until service is complete.</p>
+        </div>
+
+      </form>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+      <!-- PRICE ESTIMATOR -->
+      <div class="estimator">
+        <h3>Your Estimate</h3>
+        <div id="estimateContent">
+          <div class="est-placeholder">Select how many knives to see your estimate</div>
+        </div>
+      </div>
+
+      <!-- PRICING REFERENCE -->
+      <div class="pricing-sidebar">
+        <h3>Pricing</h3>
+        <div class="price-row"><span class="qty">1-8 knives</span><span class="rate">$80 flat (min)</span></div>
+        <div class="price-row"><span class="qty">9-19 knives</span><span class="rate">$10 per knife</span></div>
+        <div class="price-row"><span class="qty">20+ knives</span><span class="rate">$8 per knife</span></div>
+      </div>
+
+      <!-- WHAT'S INCLUDED -->
+      <div class="info-box">
+        <h3>What's Included</h3>
+        <ul>
+          <li>Full bevel restoration</li>
+          <li>Finish strop for razor edge</li>
+          <li>Edge warranty on every knife</li>
+          <li>All knife types same price</li>
+          <li>Mobile — we come to you</li>
+        </ul>
+      </div>
+
+      <!-- SERVICE AREA -->
+      <div class="info-box">
+        <h3>Service Area</h3>
+        <ul>
+          <li>Los Angeles County</li>
+          <li>Orange County</li>
+          <li>Ventura County</li>
+          <li>Parts of the Inland Empire</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <img src="images/logo.jpg" alt="Accusharp Cutlery" class="footer-logo">
+        <p class="footer-brand-name">Accusharp Cutlery</p>
+        <p>Southern California's trusted mobile knife sharpening service.</p>
+        <div class="footer-contact">
+          <a href="tel:3104201147">📞 (310) 420-1147</a>
+          <a href="mailto:info@accusharpcutlery.com">✉ info@accusharpcutlery.com</a>
+        </div>
+      </div>
+      <div>
+        <h5>Navigate</h5>
+        <a class="link" href="index.html">Home</a>
+        <a class="link" href="booking.html">Book</a>
+        <a class="link" href="pricing.html">Pricing</a>
+        <a class="link" href="about.html">About</a>
+      </div>
+      <div>
+        <h5>Areas</h5>
+        <a class="link" href="los-angeles.html">Los Angeles</a>
+        <a class="link" href="tel:3104201147">All SoCal</a>
+      </div>
+      <div>
+        <h5>Connect</h5>
+        <a class="link" href="https://facebook.com/accusharpcutlery" target="_blank" rel="noopener">Facebook</a>
+        <a class="link" href="https://instagram.com/accusharpcutlery" target="_blank" rel="noopener">Instagram</a>
+        <a class="link" href="https://shop.accusharpcutlery.com" target="_blank" rel="noopener">Shop Knives</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © <span id="currentYear">2026</span> Accusharp Cutlery Service · Never a Dull Moment · (310) 420-1147
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
