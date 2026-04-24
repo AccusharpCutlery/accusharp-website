@@ -41,7 +41,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   top: 0;
   z-index: 100;
 }
-.header .logo { height: 100px !important; width: auto !important; }
+.header .logo { height: 150px !important; width: auto !important; }
 .nav { display: flex; gap: 32px; }
 .nav a {
   color: #0a0a0a;
