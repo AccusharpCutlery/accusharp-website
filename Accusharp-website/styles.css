@@ -499,30 +499,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* -- DARK-BAND TAG/HEADING OVERRIDES -- */
 .dealers .section-tag,
-.testimonials .section-tag,
 .commercial-tag { color: #ff6b72; }
-.testimonials { background: var(--ink); color: #fff; }
-.testimonials h2 { color: #fff; }
-
-/* -- TESTIMONIALS -- */
-.t-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 40px;
-}
-.t-card {
-  background: var(--ink-2);
-  padding: 32px;
-  border: 1px solid var(--ink-3);
-  border-radius: var(--radius);
-  display: flex;
-  flex-direction: column;
-}
-.t-stars { color: #f5b301; margin-bottom: 16px; font-size: 15px; letter-spacing: 3px; }
-.t-quote { font-size: 17px; line-height: 1.6; margin-bottom: 22px; color: #dcdde0; flex: 1; }
-.t-author { font-weight: 700; font-size: 14px; color: #fff; }
-.t-author small { display: block; color: var(--on-dark-muted); font-weight: 400; margin-top: 2px; font-size: 13px; }
 
 /* -- CTA BAND -- */
 .cta-band {
@@ -1212,17 +1189,6 @@ textarea { resize: vertical; min-height: 100px; }
   gap: 10px;
 }
 .nhood::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
-.local-t {
-  background: var(--paper-2);
-  border-left: 4px solid var(--accent);
-  padding: clamp(24px, 4vw, 32px) clamp(22px, 4vw, 40px);
-  margin: 40px 0 0;
-  border-radius: 0 var(--radius) var(--radius) 0;
-}
-.local-t .stars { color: #f5b301; letter-spacing: 4px; margin-bottom: 12px; font-size: 15px; }
-.local-t blockquote { font-size: clamp(18px, 2.2vw, 21px); font-style: italic; line-height: 1.5; color: var(--ink); margin-bottom: 14px; font-weight: 500; }
-.local-t cite { font-style: normal; font-weight: 700; font-size: 14px; display: block; color: var(--ink); }
-.local-t cite small { display: block; color: var(--muted); font-weight: 400; margin-top: 2px; }
 
 /* -- THANK-YOU PAGE -- */
 .thankyou-wrap {
@@ -1316,7 +1282,6 @@ textarea { resize: vertical; min-height: 100px; }
   /* On phones the header already shows the logo — skip the big one */
   .hero-logo-display { display: none; }
 
-  .t-grid,
   .values-grid,
   .tier-grid,
   .mileage-zones { grid-template-columns: 1fr; max-width: 560px; margin-left: auto; margin-right: auto; }
