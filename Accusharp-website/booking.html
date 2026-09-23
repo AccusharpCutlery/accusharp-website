@@ -9,22 +9,23 @@
   <meta name="description" content="Book mobile knife sharpening in Southern California. We come to you. Call, text, or fill out the form. (310) 420-1147.">
 
   <!-- FAVICON -->
-  <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+  <link rel="icon" type="image/jpeg" href="images/logo-sm.jpg">
+  <meta name="theme-color" content="#0b0b0c">
 
   <!-- STYLESHEET -->
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="has-cta-bar">
 
   <!-- ANNOUNCEMENT BAR -->
   <div class="announce">
-    MOBILE KNIFE SHARPENING · <strong>BOOK ONLINE OR CALL (310) 420-1147</strong>
+    <span class="announce-long">MOBILE KNIFE SHARPENING · </span><strong>Book online or call <a href="tel:3104201147">(310) 420-1147</a></strong>
   </div>
 
   <!-- HEADER -->
   <header class="header">
     <a href="index.html" aria-label="Home">
-      <img src="images/logo.jpg" alt="Accusharp Cutlery" class="logo">
+      <img src="images/logo-sm.jpg" alt="Accusharp Cutlery" class="logo" width="600" height="332">
     </a>
     <nav class="nav" id="primaryNav">
       <a href="index.html">Home</a>
@@ -36,7 +37,7 @@
     </nav>
     <div class="header-cta">
       <a class="phone-top" href="tel:3104201147">(310) 420-1147</a>
-      <button class="mobile-nav-toggle" aria-label="Toggle menu" aria-controls="primaryNav">☰</button>
+      <button class="mobile-nav-toggle" type="button" aria-label="Open menu" aria-controls="primaryNav" aria-expanded="false"><span class="sr-only">Menu</span></button>
     </div>
   </header>
 
@@ -126,11 +127,11 @@
         <div class="field-row">
           <div>
             <label for="firstName">First Name <span class="req">*</span></label>
-            <input type="text" id="firstName" name="first_name" placeholder="John" required>
+            <input type="text" id="firstName" name="first_name" autocomplete="given-name" placeholder="John" required>
           </div>
           <div>
             <label for="lastName">Last Name <span class="req">*</span></label>
-            <input type="text" id="lastName" name="last_name" placeholder="Smith" required>
+            <input type="text" id="lastName" name="last_name" autocomplete="family-name" placeholder="Smith" required>
           </div>
         </div>
 
@@ -138,53 +139,53 @@
         <div class="field-row">
           <div>
             <label for="email">Email <span class="req">*</span></label>
-            <input type="email" id="email" name="email" placeholder="you@email.com" required>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="you@email.com" required>
           </div>
           <div>
             <label for="phone">Phone <span class="req">*</span></label>
-            <input type="tel" id="phone" name="phone" placeholder="(310) 555-0100" required>
+            <input type="tel" id="phone" name="phone" placeholder="(310) 555-0100" autocomplete="tel" required>
           </div>
         </div>
 
         <!-- ADDRESS -->
         <div class="field-group">
           <label for="street">Street Address <span class="req">*</span></label>
-          <input type="text" id="street" name="street_address" placeholder="123 Main Street" required>
+          <input type="text" id="street" name="street_address" autocomplete="street-address" placeholder="123 Main Street" required>
         </div>
         <div class="field-row">
           <div>
             <label for="city">City <span class="req">*</span></label>
-            <input type="text" id="city" name="city" placeholder="Los Angeles" required>
+            <input type="text" id="city" name="city" autocomplete="address-level2" placeholder="Los Angeles" required>
           </div>
           <div>
             <label for="zip">Zip Code <span class="req">*</span></label>
-            <input type="text" id="zip" name="zip" placeholder="90001" required>
+            <input type="text" id="zip" name="zip" placeholder="90001" inputmode="numeric" autocomplete="postal-code" required>
           </div>
         </div>
 
         <!-- KNIFE COUNT TIER SELECTOR -->
         <div class="field-group">
-          <label>How many knives? <span class="req">*</span></label>
-          <div class="tier-selector" id="tierSelector">
-            <div class="tier-option" data-tier="1-8">
+          <label id="tierLabel">How many knives? <span class="req">*</span></label>
+          <div class="tier-selector" id="tierSelector" role="group" aria-labelledby="tierLabel">
+            <button type="button" class="tier-option" data-tier="1-8" aria-pressed="false">
               <div class="tier-label">1-8</div>
               <div class="tier-sub">$80 Flat</div>
-            </div>
-            <div class="tier-option" data-tier="9-19">
+            </button>
+            <button type="button" class="tier-option" data-tier="9-19" aria-pressed="false">
               <div class="tier-label">9-19</div>
               <div class="tier-sub">$10/Knife</div>
-            </div>
-            <div class="tier-option" data-tier="20+">
+            </button>
+            <button type="button" class="tier-option" data-tier="20+" aria-pressed="false">
               <div class="tier-label">20+</div>
               <div class="tier-sub">$8/Knife</div>
-            </div>
+            </button>
           </div>
         </div>
 
         <!-- EXACT COUNT (shown after tier selected) -->
         <div class="field-group" id="exactCountGroup" style="display:none;">
           <label for="exactCount">Approximate exact count</label>
-          <input type="number" id="exactCount" name="exact_count" placeholder="e.g. 12" min="1">
+          <input type="number" id="exactCount" name="exact_count" inputmode="numeric" placeholder="e.g. 12" min="1">
         </div>
 
         <!-- KNIFE TYPES -->
@@ -284,7 +285,7 @@
   <footer class="footer">
     <div class="footer-inner">
       <div>
-        <img src="images/logo.jpg" alt="Accusharp Cutlery" class="footer-logo">
+        <img src="images/logo-sm.jpg" alt="Accusharp Cutlery" class="footer-logo" width="600" height="332" loading="lazy">
         <p class="footer-brand-name">Accusharp Cutlery</p>
         <p>Southern California's trusted mobile knife sharpening service.</p>
         <div class="footer-contact">
@@ -315,6 +316,13 @@
       © <span id="currentYear">2026</span> Accusharp Cutlery Service · Never a Dull Moment · (310) 420-1147
     </div>
   </footer>
+
+  <!-- MOBILE ACTION BAR (phones only) -->
+  <nav class="mobile-cta-bar" aria-label="Quick contact">
+    <a href="tel:3104201147">📞 Call</a>
+    <a href="sms:3104201147">💬 Text</a>
+    <a href="#form" class="primary">Book Now</a>
+  </nav>
 
   <script src="script.js"></script>
 </body>

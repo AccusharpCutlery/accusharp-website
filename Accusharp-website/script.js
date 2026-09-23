@@ -1,6 +1,7 @@
 /* ==========================================================
    ACCUSHARP CUTLERY — SHARED JAVASCRIPT
-   Used by: index.html, booking.html, pricing.html, about.html, los-angeles.html
+   Used by: index.html, booking.html, pricing.html, about.html,
+            los-angeles.html, thank-you.html
 
    Handles:
    - Mobile nav toggle
@@ -19,20 +20,56 @@ document.addEventListener('DOMContentLoaded', function () {
   const navToggle = document.querySelector('.mobile-nav-toggle');
   const nav = document.querySelector('.nav');
 
+  function setNavOpen(open) {
+    nav.classList.toggle('open', open);
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+
   if (navToggle && nav) {
     navToggle.addEventListener('click', function () {
-      nav.classList.toggle('open');
+      setNavOpen(!nav.classList.contains('open'));
+    });
+
+    // Close the menu after tapping a link, pressing Esc, or tapping outside
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () { setNavOpen(false); });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && nav.classList.contains('open')) {
+        setNavOpen(false);
+        navToggle.focus();
+      }
+    });
+    document.addEventListener('click', function (e) {
+      if (nav.classList.contains('open') && !nav.contains(e.target) && !navToggle.contains(e.target)) {
+        setNavOpen(false);
+      }
     });
   }
 
   // ------------------------------------------------------------------
   // FAQ ACCORDION
   // ------------------------------------------------------------------
-  // Click a question to expand/collapse its answer
+  // Click (or press Enter/Space on) a question to expand/collapse its answer
   const faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach(function (item) {
-    item.addEventListener('click', function () {
-      item.classList.toggle('open');
+    const q = item.querySelector('.faq-q');
+    if (!q) return;
+    q.setAttribute('role', 'button');
+    q.setAttribute('tabindex', '0');
+    q.setAttribute('aria-expanded', 'false');
+
+    function toggle() {
+      const open = item.classList.toggle('open');
+      q.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+    q.addEventListener('click', toggle);
+    q.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggle();
+      }
     });
   });
 
@@ -49,20 +86,31 @@ document.addEventListener('DOMContentLoaded', function () {
   tierOptions.forEach(function (opt) {
     opt.addEventListener('click', function () {
       // Remove 'selected' from all tiers first
-      tierOptions.forEach(function (o) { o.classList.remove('selected'); });
+      tierOptions.forEach(function (o) {
+        o.classList.remove('selected');
+        o.setAttribute('aria-pressed', 'false');
+      });
       // Mark the clicked one as selected
       opt.classList.add('selected');
+      opt.setAttribute('aria-pressed', 'true');
       selectedTier = opt.dataset.tier;
 
       // Show the exact count input now that a tier is picked
       if (exactCountGroup) {
         exactCountGroup.style.display = 'block';
 
-        // Set a sensible default count based on tier
-        if (exactCountInput && !exactCountInput.value) {
-          if (selectedTier === '1-8') exactCountInput.value = 5;
-          else if (selectedTier === '9-19') exactCountInput.value = 12;
-          else exactCountInput.value = 25;
+        // Set a sensible default count, unless the current count already fits the tier
+        if (exactCountInput) {
+          const current = parseInt(exactCountInput.value) || 0;
+          const fits =
+            (selectedTier === '1-8' && current >= 1 && current <= 8) ||
+            (selectedTier === '9-19' && current >= 9 && current <= 19) ||
+            (selectedTier === '20+' && current >= 20);
+          if (!fits) {
+            if (selectedTier === '1-8') exactCountInput.value = 5;
+            else if (selectedTier === '9-19') exactCountInput.value = 12;
+            else exactCountInput.value = 25;
+          }
         }
       }
 

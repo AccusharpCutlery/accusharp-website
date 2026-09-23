@@ -9,22 +9,23 @@
   <meta name="description" content="Transparent knife sharpening pricing. Home service from $80. 1-8 knives $80 flat, 9-19 knives $10 each, 20+ knives $8 each. Commercial volume pricing available.">
 
   <!-- FAVICON -->
-  <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+  <link rel="icon" type="image/jpeg" href="images/logo-sm.jpg">
+  <meta name="theme-color" content="#0b0b0c">
 
   <!-- STYLESHEET -->
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="has-cta-bar">
 
   <!-- ANNOUNCEMENT BAR -->
   <div class="announce">
-    MOBILE KNIFE SHARPENING · <strong>BOOK ONLINE OR CALL (310) 420-1147</strong>
+    <span class="announce-long">MOBILE KNIFE SHARPENING · </span><strong>Book online or call <a href="tel:3104201147">(310) 420-1147</a></strong>
   </div>
 
   <!-- HEADER -->
   <header class="header">
     <a href="index.html" aria-label="Home">
-      <img src="images/logo.jpg" alt="Accusharp Cutlery" class="logo">
+      <img src="images/logo-sm.jpg" alt="Accusharp Cutlery" class="logo" width="600" height="332">
     </a>
     <nav class="nav" id="primaryNav">
       <a href="index.html">Home</a>
@@ -37,7 +38,7 @@
     <div class="header-cta">
       <a class="phone-top" href="tel:3104201147">(310) 420-1147</a>
       <a href="booking.html" class="btn-book">Book Now</a>
-      <button class="mobile-nav-toggle" aria-label="Toggle menu" aria-controls="primaryNav">☰</button>
+      <button class="mobile-nav-toggle" type="button" aria-label="Open menu" aria-controls="primaryNav" aria-expanded="false"><span class="sr-only">Menu</span></button>
     </div>
   </header>
 
@@ -120,7 +121,7 @@
     <div class="calculator">
       <div class="calc-left">
         <h3>Get an instant estimate</h3>
-        <p style="margin-bottom: 24px;">Drag the slider — see what your visit would cost.</p>
+        <p>Drag the slider — see what your visit would cost.</p>
         <div class="calc-input-group">
           <label for="knifeSlider">Number of knives: <span class="slider-val" id="sliderVal">8</span></label>
           <input type="range" min="1" max="40" value="8" class="calc-slider" id="knifeSlider">
@@ -199,8 +200,8 @@
 
       </div>
 
-      <p style="text-align: center; font-size: 13px; color: #888; margin-top: 20px;">
-        Not sure which zone you're in? Enter your address on the <a href="booking.html" style="color:#0a0a0a;text-decoration:underline;">booking page</a> and we'll confirm before scheduling.
+      <p class="zone-footnote">
+        Not sure which zone you're in? Enter your address on the <a href="booking.html">booking page</a> and we'll confirm before scheduling.
       </p>
     </div>
 
@@ -278,7 +279,7 @@
   <footer class="footer">
     <div class="footer-inner">
       <div>
-        <img src="images/logo.jpg" alt="Accusharp Cutlery" class="footer-logo">
+        <img src="images/logo-sm.jpg" alt="Accusharp Cutlery" class="footer-logo" width="600" height="332" loading="lazy">
         <p class="footer-brand-name">Accusharp Cutlery</p>
         <p>Southern California's trusted mobile knife sharpening service.</p>
         <div class="footer-contact">
@@ -309,6 +310,13 @@
       © <span id="currentYear">2026</span> Accusharp Cutlery Service · Never a Dull Moment · (310) 420-1147
     </div>
   </footer>
+
+  <!-- MOBILE ACTION BAR (phones only) -->
+  <nav class="mobile-cta-bar" aria-label="Quick contact">
+    <a href="tel:3104201147">📞 Call</a>
+    <a href="sms:3104201147">💬 Text</a>
+    <a href="booking.html" class="primary">Book Now</a>
+  </nav>
 
   <script src="script.js"></script>
 </body>

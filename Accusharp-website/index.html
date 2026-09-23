@@ -17,7 +17,8 @@
   <meta property="og:image" content="https://www.accusharpcutlery.com/images/logo.jpg">
 
   <!-- FAVICON -->
-  <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+  <link rel="icon" type="image/jpeg" href="images/logo-sm.jpg">
+  <meta name="theme-color" content="#0b0b0c">
 
   <!-- STYLESHEET -->
   <link rel="stylesheet" href="styles.css">
@@ -48,17 +49,17 @@
   }
   </script>
 </head>
-<body>
+<body class="has-cta-bar">
 
   <!-- ANNOUNCEMENT BAR -->
   <div class="announce">
-    MOBILE KNIFE SHARPENING · SOUTHERN CALIFORNIA · <strong>BOOK ONLINE OR CALL (310) 420-1147</strong>
+    <span class="announce-long">MOBILE KNIFE SHARPENING · SOUTHERN CALIFORNIA · </span><strong>Book online or call <a href="tel:3104201147">(310) 420-1147</a></strong>
   </div>
 
   <!-- HEADER -->
   <header class="header">
     <a href="index.html" aria-label="Home">
-      <img src="images/logo.jpg" alt="Accusharp Cutlery" class="logo">
+      <img src="images/logo-sm.jpg" alt="Accusharp Cutlery" class="logo" width="600" height="332">
     </a>
     <nav class="nav" id="primaryNav">
       <a href="index.html" class="active">Home</a>
@@ -71,7 +72,7 @@
     <div class="header-cta">
       <a class="phone-top" href="tel:3104201147">(310) 420-1147</a>
       <a href="booking.html" class="btn-book">Book Now</a>
-      <button class="mobile-nav-toggle" aria-label="Toggle menu" aria-controls="primaryNav">☰</button>
+      <button class="mobile-nav-toggle" type="button" aria-label="Open menu" aria-controls="primaryNav" aria-expanded="false"><span class="sr-only">Menu</span></button>
     </div>
   </header>
 
@@ -89,7 +90,7 @@
         </div>
       </div>
       <div class="hero-logo-display">
-        <img src="images/logo.jpg" alt="Accusharp Cutlery — Never a Dull Moment" style="max-width:420px;">
+        <img src="images/logo.jpg" alt="Accusharp Cutlery — Never a Dull Moment" width="1200" height="663">
       </div>
     </div>
   </section>
@@ -243,7 +244,7 @@
   <footer class="footer">
     <div class="footer-inner">
       <div>
-        <img src="images/logo.jpg" alt="Accusharp Cutlery" class="footer-logo">
+        <img src="images/logo-sm.jpg" alt="Accusharp Cutlery" class="footer-logo" width="600" height="332" loading="lazy">
         <p class="footer-brand-name">Accusharp Cutlery</p>
         <p>Southern California's trusted mobile knife sharpening service. Authorized Victorinox and Messermeister dealer.</p>
         <div class="footer-contact">
@@ -277,6 +278,13 @@
       © <span id="currentYear">2026</span> Accusharp Cutlery Service · Never a Dull Moment · (310) 420-1147
     </div>
   </footer>
+
+  <!-- MOBILE ACTION BAR (phones only) -->
+  <nav class="mobile-cta-bar" aria-label="Quick contact">
+    <a href="tel:3104201147">📞 Call</a>
+    <a href="sms:3104201147">💬 Text</a>
+    <a href="booking.html" class="primary">Book Now</a>
+  </nav>
 
   <script src="script.js"></script>
 </body>

@@ -17,7 +17,8 @@
   <meta property="og:image" content="https://www.accusharpcutlery.com/images/logo.jpg">
 
   <!-- FAVICON -->
-  <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+  <link rel="icon" type="image/jpeg" href="images/logo-sm.jpg">
+  <meta name="theme-color" content="#0b0b0c">
 
   <!-- STYLESHEET -->
   <link rel="stylesheet" href="styles.css">
@@ -50,17 +51,17 @@
   }
   </script>
 </head>
-<body>
+<body class="has-cta-bar">
 
   <!-- ANNOUNCEMENT BAR -->
   <div class="announce">
-    MOBILE KNIFE SHARPENING · <strong>BOOK ONLINE OR CALL (310) 420-1147</strong>
+    <span class="announce-long">MOBILE KNIFE SHARPENING · </span><strong>Book online or call <a href="tel:3104201147">(310) 420-1147</a></strong>
   </div>
 
   <!-- HEADER -->
   <header class="header">
     <a href="index.html" aria-label="Home">
-      <img src="images/logo.jpg" alt="Accusharp Cutlery" class="logo">
+      <img src="images/logo-sm.jpg" alt="Accusharp Cutlery" class="logo" width="600" height="332">
     </a>
     <nav class="nav" id="primaryNav">
       <a href="index.html">Home</a>
@@ -73,7 +74,7 @@
     <div class="header-cta">
       <a class="phone-top" href="tel:3104201147">(310) 420-1147</a>
       <a href="booking.html" class="btn-book">Book Now</a>
-      <button class="mobile-nav-toggle" aria-label="Toggle menu" aria-controls="primaryNav">☰</button>
+      <button class="mobile-nav-toggle" type="button" aria-label="Open menu" aria-controls="primaryNav" aria-expanded="false"><span class="sr-only">Menu</span></button>
     </div>
   </header>
 
@@ -132,11 +133,11 @@
     <div class="section-inner">
       <div class="two-col">
         <div>
-          <div class="section-tag" style="text-align:left;">About Our Los Angeles Service</div>
-          <h2 style="text-align:left;margin-bottom:20px;font-size:38px;">LA is where we live.</h2>
-          <p style="margin-bottom:14px;font-size:17px;color:#444;max-width:none;">Los Angeles is our home base — the city where Accusharp started and where we know every back road to every neighborhood. We've been sharpening for LA home cooks, restaurants, food trucks, and private chefs for over two decades.</p>
-          <p style="margin-bottom:14px;font-size:17px;color:#444;max-width:none;">Because LA is our home turf, we offer faster service here than anywhere else. Same-day appointments are frequently available when you call before noon. Our weekly route covers Westside, Hollywood, Silver Lake / Echo Park, Downtown, Culver City, and Mid-City. Valley and South LA accessible with a day's notice.</p>
-          <p style="margin-bottom:14px;font-size:17px;color:#444;max-width:none;">Our LA clients include everything from Korean BBQ spots in K-Town to private chefs in the Hills to food trucks in Highland Park. As authorized <strong>Victorinox</strong> and <strong>Messermeister</strong> dealers, we also deliver knives throughout the city.</p>
+          <div class="section-tag left">About Our Los Angeles Service</div>
+          <h2 class="left">LA is where we live.</h2>
+          <p class="lead">Los Angeles is our home base — the city where Accusharp started and where we know every back road to every neighborhood. We've been sharpening for LA home cooks, restaurants, food trucks, and private chefs for over two decades.</p>
+          <p class="lead">Because LA is our home turf, we offer faster service here than anywhere else. Same-day appointments are frequently available when you call before noon. Our weekly route covers Westside, Hollywood, Silver Lake / Echo Park, Downtown, Culver City, and Mid-City. Valley and South LA accessible with a day's notice.</p>
+          <p class="lead">Our LA clients include everything from Korean BBQ spots in K-Town to private chefs in the Hills to food trucks in Highland Park. As authorized <strong>Victorinox</strong> and <strong>Messermeister</strong> dealers, we also deliver knives throughout the city.</p>
         </div>
         <div>
           <!--
@@ -259,9 +260,10 @@
 
   <!-- LA-SPECIFIC FAQ -->
   <section class="section">
-    <div class="section-inner" style="max-width:900px;">
-      <div class="section-tag" style="text-align:center;">LA Questions</div>
-      <h2 style="text-align:center;margin-bottom:40px;">Los Angeles FAQs</h2>
+    <div class="section-inner narrow">
+      <div class="section-tag">LA Questions</div>
+      <h2>Los Angeles FAQs</h2>
+      <div class="faq-section">
 
       <div class="faq-item">
         <div class="faq-q">How fast can you get to my LA address?</div>
@@ -292,6 +294,7 @@
         <div class="faq-q">Can you sharpen at my LA restaurant during service hours?</div>
         <div class="faq-a">We usually schedule restaurant visits during prep hours (9am-11am) or off-hours (2pm-4pm). Whatever fits your service windows. We can also come in before first prep if that works better.</div>
       </div>
+      </div>
 
     </div>
   </section>
@@ -311,7 +314,7 @@
   <footer class="footer">
     <div class="footer-inner">
       <div>
-        <img src="images/logo.jpg" alt="Accusharp Cutlery" class="footer-logo">
+        <img src="images/logo-sm.jpg" alt="Accusharp Cutlery" class="footer-logo" width="600" height="332" loading="lazy">
         <p class="footer-brand-name">Accusharp Cutlery</p>
         <p>Southern California's trusted mobile knife sharpening service.</p>
         <div class="footer-contact">
@@ -342,6 +345,13 @@
       © <span id="currentYear">2026</span> Accusharp Cutlery Service · Never a Dull Moment · (310) 420-1147
     </div>
   </footer>
+
+  <!-- MOBILE ACTION BAR (phones only) -->
+  <nav class="mobile-cta-bar" aria-label="Quick contact">
+    <a href="tel:3104201147">📞 Call</a>
+    <a href="sms:3104201147">💬 Text</a>
+    <a href="booking.html" class="primary">Book Now</a>
+  </nav>
 
   <script src="script.js"></script>
 </body>
