@@ -21,7 +21,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (navToggle && nav) {
     navToggle.addEventListener('click', function () {
-      nav.classList.toggle('open');
+      const isOpen = nav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    // Close the menu after a link is tapped
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        nav.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
     });
   }
 
