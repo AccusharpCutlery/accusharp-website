@@ -23,6 +23,11 @@
   status = 200
 
 [[redirects]]
+  from = "/restaurants"
+  to = "/restaurants.html"
+  status = 200
+
+[[redirects]]
   from = "/long-beach"
   to = "/long-beach.html"
   status = 200

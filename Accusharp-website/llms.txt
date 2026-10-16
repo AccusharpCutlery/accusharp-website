@@ -39,5 +39,6 @@
 - [Pricing](https://accusharpcutlery.com/pricing): price tiers, travel zones, add-ons and pricing FAQs
 - [Book sharpening](https://accusharpcutlery.com/booking): appointment request form
 - [About](https://accusharpcutlery.com/about): Omar's story and guarantees
+- [Restaurants and commercial kitchens](https://accusharpcutlery.com/restaurants): on-site sharpening routes for restaurants, caterers, butcher shops and food trucks
 - [Los Angeles service](https://accusharpcutlery.com/los-angeles): neighborhoods covered and LA-specific FAQs
 - [Shop knives](https://shop.accusharpcutlery.com): Victorinox and Messermeister knives
